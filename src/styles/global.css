@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* --bg-color: rgb(197, 55, 55); */
+  --bg-gradient: linear-gradient(
+    135deg,
+    rgb(148, 140, 140),
+    rgb(255, 255, 255)
+  );
+  --text-color: #111827; /* gray-900 */
+  --primary-color: #3b82f6; /* blue-500 */
+  --font-family: "Arial", sans-serif;
+}
+
+.dark {
+  /* --bg-color: #111827; gray-900 */
+  --bg-gradient: linear-gradient(180deg, #111827, #374151);
+  --text-color: white;
+  --primary-color: #60a5fa; /* blue-400 */
+  --font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: var(--bg-gradient);
+  /* background: var(--bg-color); */
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
