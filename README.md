@@ -1,7 +1,7 @@
 How the Website Knows Which Elements to Change
 The website determines which elements' backgrounds (and other styles) should change through this mechanism:
 
-Class Toggling: The JavaScript in dark-mode-switch.js adds/removes the "dark" class on the <html> element (document.documentElement)
+Class Toggling: The JavaScript in dark-mode-switch.js adds/removes the "dark" class on the "<html>" element (document.documentElement)
 
 CSS Selectors:
 

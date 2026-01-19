@@ -6,7 +6,7 @@
   /* --bg-color: rgb(197, 55, 55); */
   --bg-gradient: linear-gradient(
     135deg,
-    rgb(148, 140, 140),
+    rgb(77, 72, 72),
     rgb(255, 255, 255)
   );
   --text-color: #111827; /* gray-900 */
@@ -16,7 +16,7 @@
 
 .dark {
   /* --bg-color: #111827; gray-900 */
-  --bg-gradient: linear-gradient(180deg, #111827, #374151);
+  --bg-gradient: linear-gradient(180deg, #111827, #375150);
   --text-color: white;
   --primary-color: #60a5fa; /* blue-400 */
   --font-family: "Roboto", sans-serif;

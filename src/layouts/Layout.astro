@@ -3,20 +3,38 @@ import ThemeModeButton from "../components/ThemeModeButton.astro";
 import "../styles/global.css";
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Astro+Tailwind</title>
   </head>
-  <body class="flex h-screen items-center justify-center"> </body><header>
-    <header>
+
+  <body
+    class="min-h-screen flex flex-col w-full px-2 py-1 gap-2 border-5 border-yellow-500"
+  >
+    <!-- Header -->
+    <header
+      class="min-h-16 flex items-center justify-end px-2 border-2 border-red-500"
+    >
       <ThemeModeButton />
     </header>
-    <main>
+
+    <!-- Main -->
+    <main
+      class="flex-1 w-full flex justify-center border-2 border-white-500 py-2"
+    >
       <slot />
     </main>
-  </header>
+
+    <!-- Footer -->
+    <footer
+      class="min-h-12 flex items-center justify-center px-2 border-2 border-blue-500"
+    >
+      <p class="text-sm text-gray-600">© 2026 McKenzi84</p>
+    </footer>
+  </body>
 </html>
