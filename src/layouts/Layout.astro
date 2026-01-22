@@ -2,6 +2,7 @@
 import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
+const baseUrl = import.meta.env.BASE_URL;
 
 interface Props {
   title: string;
@@ -15,11 +16,7 @@ const { title, description } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/AstroTailwindThemeToggle/favicon.svg"
-    />
+    <link rel="icon" type="image/svg+xml" href={`${baseUrl}/favicon.svg`} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro+Tailwind</title>
@@ -43,5 +40,8 @@ const { title, description } = Astro.props;
     >
       <p class="text-sm">© 2026 McKenzi84</p>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"
+      defer></script>
   </body>
 </html>
