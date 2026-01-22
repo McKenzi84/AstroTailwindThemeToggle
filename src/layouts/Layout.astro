@@ -1,9 +1,14 @@
 ---
-import ThemeModeButton from "../components/ThemeModeButton.astro";
-import DarkMode from "../components/DarkMode.astro";
+import Head from "../components/Head.astro";
+import Header from "../components/Header.astro";
 import "../styles/global.css";
-import VideoBackground from "../components/VideoBackground.astro";
-import HeaderLink from "../components/HeaderLink.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -24,27 +29,8 @@ import HeaderLink from "../components/HeaderLink.astro";
     class="min-h-screen flex flex-col w-full px-2 py-1 gap-2 border-5 border-yellow-500"
   >
     <!-- Header -->
-    <header
-      class="min-h-16 flex items-center justify-end px-2 border-2 border-red-500"
-    >
-      <div id="navbar-default" class="hidden w-full md:block md:w-auto">
-        <ul
-          class="mt-4 flex flex-col gap-2 rounded-lg
-            bg-white/70 backdrop-blur-md
-            dark:bg-gray-900/70
-            md:mt-0 md:flex-row md:gap-8
-            md:bg-transparent md:backdrop-blur-0"
-        >
-          <HeaderLink href="/">Home</HeaderLink>
-          <HeaderLink href="/video">Video</HeaderLink>
-        </ul>
-      </div>
-      <ThemeModeButton />
-    </header>
-
-    <!-- Main 
-    class="flex-1 w-full flex justify-center border-2 border-white-500 py-2" 
-    -->
+    <Header />
+    <!-- Main Content -->
     <main
       class="flex-1 w-full flex justify-center border-2 border-white-500 py-2"
     >

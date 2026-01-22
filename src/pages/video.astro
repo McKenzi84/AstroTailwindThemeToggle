@@ -1,19 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-import VideoBackground from "../components/VideoBackground.astro";
+// import VideoBackground from "../components/VideoBackground.astro";
+import { Image } from "astro:assets";
+import Minkowice from "./public/jelcz.svg";
 ---
 
-<Layout>
-  <div class="w-full p-4 space-y-4 border-2 border-green-500">
-    <div
-      class="border-2 rounded-lg px-2 py-2 relative w-full h-full overflow-hidden"
-    >
-      <VideoBackground
-        src="/AstroTailwindThemeToggle/video/42TransparentScorpioLogo.webm"
-      >
-        <h2 class="text-3xl text-center pt-1">Hello, Scorpio!</h2>
-      </VideoBackground>
-    </div>
+<Layout title="Video Page" description="This is the video page">
+  <div class="h-[80vh] w-full flex items-center justify-center overflow-hidden">
+    <Image
+      src={Minkowice}
+      alt="Image"
+      class="h-full w-auto max-w-full object-contain"
+    />
   </div>
 </Layout>

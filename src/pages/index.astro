@@ -1,32 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
 import Accordion from "../components/Accordion.astro";
-import VideoBackground from "../components/VideoBackground.astro";
 ---
 
-<Layout>
+<Layout title="Home" description="Welcome to the home page">
   <div class="w-full max-w-4xl p-4 space-y-4 border-2 border-green-500">
     <h1 class="border-2 rounded-lg text-center">Astro</h1>
     <div class="border-2 rounded-lg px-2 py-2">
-      <!-- <video
-        slot="background"
-        autoplay
-        muted
-        loop
-        playsinline
-        class="relative w-full overflow-hidden rounded-2xl"
-      >
-        <source
-          src="/AstroTailwindThemeToggle/video/ace_logo.mp4"
-          type="video/mp4"
-        />
-      </video> -->
       <Accordion />
-      <!-- <div class="h-[500px]">
-        <VideoBackground src="/AstroTailwindThemeToggle/video/ace_logo.mp4">
-          <h2 class="text-3xl text-center pt-1">Hello</h2>
-        </VideoBackground>
-      </div> -->
     </div>
   </div>
 </Layout>
